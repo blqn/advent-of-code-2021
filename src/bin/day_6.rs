@@ -39,9 +39,6 @@ fn compute(start: &Vec<i32>, days: i32) -> i64 {
         let i: usize = (*init).try_into().unwrap();
         adults[i] += 1
     }
-    for (i, x) in adults.iter().enumerate() {
-        println!("{} - {}", i, x);
-    }
     for _ in 0..days {
         let head = adults[0];
         adults = adults[1..].iter().cloned().collect();
